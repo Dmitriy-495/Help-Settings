@@ -1,0 +1,134 @@
+# 🚀 АУТЕНТИФИКАЦИЯ И НАСТРОЙКА
+gh auth login          # Войти в GitHub
+gh auth status         # Проверить авторизацию
+gh auth logout         # Выйти
+gh auth refresh        # Обновить токен
+gh config list         # Список настроек
+gh config set          # Установить настройку
+gh config get          # Получить настройку
+
+# 📁 РЕПОЗИТОРИИ
+gh repo create         # Создать новый репо
+gh repo clone          # Клонировать репо
+gh repo fork           # Сделать форк
+gh repo view           # Посмотреть инфо
+gh repo list           # Список репозиториев
+gh repo delete         # Удалить репо
+gh repo rename         # Переименовать
+gh repo edit           # Редактировать настройки
+gh repo archive        # Архивировать
+gh repo unarchive      # Разархивировать
+gh repo sync           # Синхронизировать с upstream
+
+# 🌿 PULL REQUESTS
+gh pr create           # Создать PR
+gh pr list             # Список PR
+gh pr view             # Посмотреть PR
+gh pr checkout         # Переключиться на PR
+gh pr status           # Статус PR
+gh pr review           # Ревью PR
+gh pr merge            # Смержить PR
+gh pr close            # Закрыть PR
+gh pr reopen           # Открыть PR
+gh pr diff             # Показать изменения
+gh pr checks           # Проверки PR
+gh pr comment          # Комментарий к PR
+gh pr edit             # Редактировать PR
+gh pr ready            # Отметить как готовый
+
+# 🐛 ISSUES
+gh issue create        # Создать issue
+gh issue list          # Список issues
+gh issue view          # Посмотреть issue
+gh issue edit          # Редактировать
+gh issue close         # Закрыть issue
+gh issue reopen        # Открыть заново
+gh issue comment       # Добавить комментарий
+gh issue status        # Статус issues
+gh issue lock          # Заблокировать
+gh issue unlock        # Разблокировать
+gh issue pin           # Закрепить
+gh issue unpin         # Открепить
+
+# 🤖 GITHUB ACTIONS
+gh run list            # Список запусков
+gh run view            # Посмотреть запуск
+gh run watch           # Следить в реальном времени
+gh run rerun           # Перезапустить
+gh run cancel          # Отменить
+gh run download        # Скачать артефакты
+gh workflow list       # Список workflows
+gh workflow view       # Посмотреть workflow
+gh workflow enable     # Включить workflow
+gh workflow disable    # Отключить workflow
+gh workflow run        # Запустить workflow
+
+# 🔑 SSH И GPG КЛЮЧИ
+gh ssh-key list        # Список SSH ключей
+gh ssh-key add         # Добавить SSH ключ
+gh ssh-key delete      # Удалить SSH ключ
+gh gpg-key list        # Список GPG ключей
+gh gpg-key add         # Добавить GPG ключ
+gh gpg-key delete      # Удалить GPG ключ
+
+# 📦 РЕЛИЗЫ
+gh release create      # Создать релиз
+gh release list        # Список релизов
+gh release view        # Посмотреть релиз
+gh release download    # Скачать релиз
+gh release delete      # Удалить релиз
+gh release upload      # Загрузить файлы
+gh release edit        # Редактировать релиз
+
+# 👥 GIST
+gh gist create         # Создать gist
+gh gist list           # Список gist
+gh gist view           # Посмотреть gist
+gh gist edit           # Редактировать
+gh gist delete         # Удалить gist
+gh gist clone          # Клонировать gist
+
+# 🔍 ПОИСК
+gh search repos        # Искать репозитории
+gh search issues       # Искать issues
+gh search prs          # Искать PR
+gh search commits      # Искать коммиты
+gh search code         # Искать код
+
+# 📊 СТАТУС И ИНФО
+gh status              # Статус в GitHub CLI
+gh version             # Версия CLI
+gh help                # Помощь
+gh <команда> --help    # Помощь по команде
+
+# ⚡ ПОЛЕЗНЫЕ КОМБИНАЦИИ
+gh pr create --fill                 # Быстрый PR из текущей ветки
+gh pr list --author "@me"           # Мои PR
+gh issue list --state open          # Открытые issues
+gh issue create --label "bug"       # Создать issue с меткой
+gh repo clone user/repo && cd repo  # Клонировать и перейти
+gh repo delete user/repo --confirm  # Удалить без подтверждения
+gh run watch                        # Следить за выполнением
+gh release download --pattern "*.deb" # Скачать только deb файлы
+
+# 🎯 ПРИМЕРЫ ДЛЯ СОЛО-РАЗРАБОТЧИКА
+# Создать новый репозиторий
+gh repo create dtrader --public --source=. --remote=origin --push
+
+# Посмотреть инфо о текущем репо
+gh repo view
+
+# Создать issue-напоминалку
+gh issue create --title "Доделать подпись" --body "Проверить документацию"
+
+# Посмотреть статус Actions
+gh run list
+
+# Создать релиз
+gh release create v1.0.0 --title "Первый релиз" --notes "Стабильная версия"
+
+# Синхронизировать форк
+gh repo sync
+
+# Удалить старый репозиторий
+gh repo delete old-project --confirm
