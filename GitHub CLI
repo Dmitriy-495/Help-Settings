@@ -132,3 +132,16 @@ gh repo sync
 
 # Удалить старый репозиторий
 gh repo delete old-project --confirm
+
+# 1. Войти в GitHub
+gh auth login
+
+# 2. Клонировать проект
+gh repo clone tda/dtrader-4
+
+# 3. Создать ветку и PR
+git checkout -b new-feature
+git add .
+git commit -m "feat: крутая фича"
+git push -u origin new-feature
+gh pr create --fill
